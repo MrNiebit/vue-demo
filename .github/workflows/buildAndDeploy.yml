@@ -4,20 +4,20 @@ name: buildAndDeploy
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on push or pull request events but only for the main branch push事件触发
   push:
     branches: master
-  pull_request:
-    branches: master
+  # pull_request:
+  #   branches: master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a single job called "build"  job的名字
   build:
-    # The type of runner that the job will run on
+    # The type of runner that the job will run on 运行所在的系统
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: buildAndDeploy
-        uses: MrNiebit/vue-demo@master
+        # uses: MrNiebit/vue-demo@master
         env: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
