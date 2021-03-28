@@ -24,20 +24,21 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
      # - uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@master
+        
+      - name: install and build
+        run: |
+          npm install
+          npm run build
 
       # Runs a single command using the runners shell
       - name: buildAndDeploy
-        # uses: MrNiebit/vue-demo@master
+        uses: MrNiebit/vue-demo@master
         env: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
+          BRANCH: gh-pages
           FOLDER: dist
           BUILD_INSTALL: npm install
-          run: $BUILD_INSTALL
-          
-      - name: install
-        env:
-          RUN_BUILD: npm run build
-          run: $RUN_BUILD
 
       # Runs a set of commands using the runners 
