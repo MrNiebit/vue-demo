@@ -32,7 +32,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
           FOLDER: dist
-          BUILD_SCRIPT: npm install && npm run build
+          BUILD_SCRIPT: `npm install && npm run build`
         run: $BUILD_SCRIPT
 
       # Runs a set of commands using the runners 
