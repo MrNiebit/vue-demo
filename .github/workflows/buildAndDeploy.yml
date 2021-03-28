@@ -30,7 +30,7 @@ jobs:
         uses: mrniebit/vue-demo@gh-page
         env: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
+          BRANCH: master
           FOLDER: dist
           BUILD_SCRIPT: npm install && npm run build
 
