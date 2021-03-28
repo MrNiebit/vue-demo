@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@main
 
       - name: install and build
         run: |
@@ -33,7 +33,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: buildAndDeploy
-        uses: ./.github/actions/vue-demo@master
+        uses: MrNiebit/vue-demo@main
         env: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
