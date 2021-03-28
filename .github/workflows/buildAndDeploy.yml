@@ -34,7 +34,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: buildAndDeploy
-        uses: ./.github/actions/vue-demo@master
+        uses: ./.github/buildAndDeploy.yml
         env: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
