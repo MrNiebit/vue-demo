@@ -44,7 +44,7 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     // assetsPulicPath: '/vue-demo'
-    assetsPublicPath: 'https://cdn.jsdelivr.net/gh/MrNiebit/vue-demo@gh-pages/static/',
+    assetsPublicPath: 'https://cdn.jsdelivr.net/gh/MrNiebit/vue-demo@gh-pages/',
 
     /**
      * Source Maps
